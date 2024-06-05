@@ -1,0 +1,15 @@
+<%= form_with(model: post, local: true) do |form| %>
+    <%= render 'layouts/error_messages', model: form.object %>
+    <div class="text_field">
+        <%= form.label :title, class: "form-label" %>
+        <%= form.text_field :title, class: "form-control" %>
+    </div>
+    <div class="text_field">
+        <%= form.label :content, class: "form-label" %>
+        <%= form.text_area :content, class: "form-control" %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit "投稿", class: "btn btn-primary mb-3" %> <%#作っただけの状態でボタン押してもunknownアクションになるので、createアクションが必要%>
+    </div>
+<% end %>

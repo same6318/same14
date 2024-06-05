@@ -1,0 +1,20 @@
+<div class='create_btn'>
+    <%= link_to '新しい投稿', new_post_path, class: "btn btn-success btn-lg" %> <%#ここでエラー発生。undefined local variable or method `new_posts_path' for an instance of #<Class:0x00007f4af72bb238>%>
+    <%# resourcesで:posts設定している場合は、単数形でpath作成する%>
+</div>
+
+<h1>投稿一覧</h1>
+
+    <% @posts.each do |post| %> <%#ここの＠posts変数はデータベースの中の全て。それを1個ずつ取得して表示%>
+        <div class='main'>
+            <h2><%= post.title%></h2>
+            <p><%= post.content%></p>
+            <p><small><%= post.created_at%></small></p>
+            <p><small><%= post.updated_at%></small></p>
+            <ul>
+                <li><%= link_to '詳細', post_path(post), class: "btn btn-primary" %></li> <%# posts#showアクションは「post GET」ルートになるので、パス指定はpost_path(post)でok%>
+                <li><%= link_to '編集', edit_post_path(post), class: "btn btn-primary" %></li> <%# posts#editアクションは「edit_post GET」ルートになるので、パス指定はedit_post_path(post)になる%>
+                <li><%= link_to '削除', post_path(post), class: "btn btn-primary", method: :delete, data: { confirm: '削除してもよろしいですか？' } %></li>
+            </ul>
+        </div>
+    <% end %>

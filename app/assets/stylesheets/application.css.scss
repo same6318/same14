@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* @import '~bootstrap/scss/bootstrap'; */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+// universal
+
+body {
+    // margin: 0 auto;
+    padding: 60px 15px 0;
+    font-family: "メイリオ";
+}
+
+div {
+    padding: 1em 0 1em; /*上1em、左右0、下2em*/
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+
+div.main {
+    text-align: left;
+    width: 50%;
+    padding: 0.5em 1em;
+    margin: 10px;
+    font-weight: bold;
+    border: solid 3px #000000;
+}
+
+div.create_btn{
+    text-align: right;
+}
+
+// .container {
+//     text-align: center;
+//     width: 50%;
+//     padding: 0.5em 1em;
+//     margin: 0 auto; /*左右中央ぞろえ*/
+//     font-weight: bold;
+//     border: solid 3px #000000;
+// }
+
+.alert {
+    background-color: orange;
+    font-size: 12px;
+}
+
+// div.field {
+//     margin-bottom: 20px;
+//     width: 100%;
+//   }
+  
+// div.field,
+// div.text_field {
+//     width: 100%;
+//     padding: 10px;
+//     border: 1px solid #ddd;
+//     border-radius: 5px;
+//   }
+
+// div.actions {
+//     padding: 10px;
+// }
+

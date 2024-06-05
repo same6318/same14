@@ -1,0 +1,9 @@
+<h1>新しい投稿</h1>
+
+<!--<% if flash[:alert] %>
+    <p class="alert"><%= flash[:alert] %></p>
+<% end %>-->
+
+<%= render 'form', post: @post %>
+
+<%= link_to 'Back', posts_path, class: "btn btn-primary" %>
